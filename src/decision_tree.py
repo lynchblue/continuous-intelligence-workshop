@@ -115,7 +115,7 @@ def write_predictions_and_score(evaluation_metrics, model, columns_used):
         json.dump(evaluation_metrics, score_file)
 
 
-def main(model=Model.DECISION_TREE, seed=None):
+def main(model=Model.ADABOOST, seed=None):
     original_train, original_validate = load_data()
     train, validate = encode(original_train, original_validate)
     with tracking.track() as track:
